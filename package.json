@@ -1,0 +1,13 @@
+{
+  "name": "muzikie-website",
+  "version": "1.0.0",
+  "description": "The official website of Muzikie",
+  "keywords": ["music", "streaming", "website"],
+  "author": "Block Made GmbH",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.6.2",
+    "jquery": "^3.6.1",
+    "owl.carousel": "^2.3.4"
+  }
+}
