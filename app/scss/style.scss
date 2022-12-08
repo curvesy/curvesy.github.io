@@ -4784,9 +4784,9 @@ blockquote {
       margin-top: -140px;
    }
 
-   .transition.is--first {
-      margin-bottom: -120px;
-   }
+   // .transition.is--first {
+   //    margin-bottom: -120px;
+   // }
 
    .logos {
       grid-column-gap: 64px;
@@ -5319,4 +5319,16 @@ blockquote {
 menu__link.navnar-color {
    color: #2bcb9b !important;
    margin-top: 0rem;
+}
+
+.reveal {
+   position: relative;
+   transform: translateY(150px);
+   opacity: 0;
+   transition: 1s all ease;
+}
+
+.reveal.active {
+   transform: translateY(0);
+   opacity: 1;
 }
