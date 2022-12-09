@@ -18,7 +18,7 @@ window.onscroll = function (event) {
       elem.style.transition = "opacity 0.4s linear 0.1s";
       elem.style.opacity = 1.0;
       elem.style.backgroundColor = "#0D1E21";
-      backDrop.style.transition = "color 0.2s linear 0s";
+      backDrop.style.transition = "color 0.2s linear 0.2s";
       backDrop.style.color = "#0D1E21";
    } else if (scroll >= 1200 && scroll < 1780) {
       // orange
@@ -38,8 +38,8 @@ window.onscroll = function (event) {
 /// open/close contact menu
 
 function openChat() {
-   document.getElementById("showcontact").style.display = "block";
-   document.getElementById("wf-form-Project-inquiry").style.display = "block";
+   document.getElementById("showcontact").classList.add("chat");
+   document.getElementById("wf-form-Project-inquiry").classList.add("chat");
 }
 
 function closeFunction() {
@@ -65,36 +65,16 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-// function fadeOut(el) {
-//    var scroll = window.pageYOffset;
-//    var elem = document.getElementById(el);
-//    console.log(elem);
-//
-//    if (scroll >= 600 && scroll < 1200) {
-//       // blue
-//       elem.style.transition = "opacity 0.5s linear 0s";
-//       elem.style.opacity = 0.5;
-//    } else {
-//       // purple
-//       elem.style.transition = "opacity 0.5s linear 0s";
-//       elem.style.opacity = 0.0;
-//    }
-//    // var elem = document.getElementById(el);
-//    // elem.style.transition = "opacity 0.5s linear 0s";
-//    // elem.style.opacity = 0;
-// }
-// function fadeIn(el) {}
+const observer = new IntersectionObserver((entries) => {
+   entries.forEach((entery) => {
+      console.log(entery);
+      if (entery.isIntersecting) {
+         entery.target.classList.add("show");
+      } else {
+         entery.target.classList.remove("show");
+      }
+   });
+});
 
-// window.onscroll = function (event) {
-//    var scroll = window.pageYOffset;
-//    var elem = document.getElementById("el");
-//    console.log(elem);
-//    if (scroll > 600) {
-//       elem.style.transition = "opacity 0.5s linear 0s";
-//       elem.style.opacity = 1.0;
-//       elem.style.backgroundColor = "#0D1E21";
-//    } else if (scroll < 600) {
-//       elem.style.transition = "opacity 0.5s linear 0s";
-//       elem.style.opacity = 0.0;
-//    }
-// };
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
