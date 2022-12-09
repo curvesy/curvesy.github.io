@@ -5,6 +5,7 @@ backDrop.style.color = "rgb(249, 248, 244)";
 window.onscroll = function (event) {
    var scroll = window.pageYOffset;
    var elem = document.getElementById("el");
+   var aTags = document.getElementsByTagName("a");
    if (scroll < 300) {
       elem.style.transition = "opacity 0.1s linear 0s";
       elem.style.opacity = 0.0;
@@ -13,24 +14,21 @@ window.onscroll = function (event) {
       elem.style.transition = "opacity 0.5s linear 0s";
       elem.style.opacity = 0.0;
       backDrop.style.color = "rgb(249, 248, 244)";
-   } else if (scroll >= 700 && scroll < 1200) {
-      // blue
+   } else if (scroll >= 700 && scroll < 6340) {
+      for (aTag of aTags) {
+         aTag.style.color = "rgb(249, 248, 244)";
+      }
+
       elem.style.transition = "opacity 0.4s linear 0.1s";
       elem.style.opacity = 1.0;
+
       elem.style.backgroundColor = "#0D1E21";
       backDrop.style.transition = "color 0.2s linear 0.2s";
       backDrop.style.color = "#0D1E21";
-   } else if (scroll >= 1200 && scroll < 1780) {
-      // orange
-      elem.style.opacity = 0.0;
-      backDrop.style.color = "#0D1E21";
-   } else if (scroll >= 1780 && scroll < 6340) {
-      // red
-      elem.style.opacity = 0.0;
-      backDrop.style.color = "#0D1E21";
    } else {
-      // purple
-      //       elem.style.opacity = 0.0;
+      for (aTag of aTags) {
+         aTag.style.color = "#0D1E21";
+      }
       backDrop.style.color = "rgb(249, 248, 244)";
    }
 };
@@ -72,7 +70,6 @@ window.addEventListener("scroll", reveal);
 
 const observer = new IntersectionObserver((entries) => {
    entries.forEach((entery) => {
-      console.log(entery);
       if (entery.isIntersecting) {
          entery.target.classList.add("show");
       } else {
