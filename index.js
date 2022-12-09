@@ -38,13 +38,18 @@ window.onscroll = function (event) {
 /// open/close contact menu
 
 function openChat() {
-   document.getElementById("showcontact").classList.add("chat");
+   var contactFrom = document.getElementById("showcontact");
+
+   contactFrom.classList.add("chat");
    document.getElementById("wf-form-Project-inquiry").classList.add("chat");
+
+   // contactFrom.className = contactFrom.className === "chat" ? "" : "chat";
 }
 
 function closeFunction() {
-   document.getElementById("showcontact").style.display = "none";
-   document.getElementById("wf-form-Project-inquiry").style.display = "none";
+   var contactFrom = document.getElementById("showcontact");
+   contactFrom.classList.remove("chat");
+   document.getElementById("wf-form-Project-inquiry").classList.remove("chat");
 }
 
 function reveal() {
