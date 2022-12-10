@@ -1904,18 +1904,18 @@ blockquote {
    color: #fff;
 }
 
-.accordion-item.js-accordion-item.is--darkmode:hover {
-   background-color: #313c3d;
+.accordion-item.js-accordion-item.is--darkmode:hover:not(.active) {
+   background: linear-gradient(#524154, #443c4e);
 }
 
 .accordion-item.js-accordion-item.is--darkmode.active {
    color: #fff;
+   background-color: #000;
 }
 
 .accordion-item.js-accordion-item.is--darkmode.active:hover {
    background-color: #000;
 }
-
 .accordion-header.js-accordion-header {
    display: -webkit-box;
    display: -webkit-flex;
@@ -2092,7 +2092,7 @@ blockquote {
    flex: 0 0 auto;
    grid-row-gap: 0.25em;
    border-radius: 1em;
-   background-color: #f9f8f4;
+   background-color: #feeae2;
 }
 
 .accordion-body__example-project {
