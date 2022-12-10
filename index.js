@@ -1,5 +1,5 @@
 var backDrop = document.getElementById("nav-back");
-backDrop.style.color = "rgb(249, 248, 244)";
+backDrop.style.color = "#feeae3";
 
 // trigger this function every time the user scrolls
 window.onscroll = function (event) {
@@ -9,11 +9,11 @@ window.onscroll = function (event) {
    if (scroll < 300) {
       elem.style.transition = "opacity 0.1s linear 0s";
       elem.style.opacity = 0.0;
-      backDrop.style.color = "rgb(249, 248, 244)";
+      backDrop.style.color = "#feeae3";
    } else if (scroll >= 300 && scroll < 600) {
       elem.style.transition = "opacity 0.5s linear 0s";
       elem.style.opacity = 0.0;
-      backDrop.style.color = "rgb(249, 248, 244)";
+      backDrop.style.color = "#feeae3";
    } else if (scroll >= 700 && scroll < 6340) {
       for (aTag of aTags) {
          aTag.style.color = "rgb(249, 248, 244)";
@@ -21,15 +21,16 @@ window.onscroll = function (event) {
 
       elem.style.transition = "opacity 0.4s linear 0.1s";
       elem.style.opacity = 1.0;
+      elem.style.backgroundColor = "#453248";
 
-      elem.style.backgroundColor = "#0D1E21";
+      elem.style.backgroundColor = "#453248";
       backDrop.style.transition = "color 0.2s linear 0.2s";
-      backDrop.style.color = "#0D1E21";
+      backDrop.style.color = "#453248";
    } else {
       for (aTag of aTags) {
-         aTag.style.color = "#0D1E21";
+         aTag.style.color = "#453248";
       }
-      backDrop.style.color = "rgb(249, 248, 244)";
+      backDrop.style.color = "#feeae3";
    }
 };
 

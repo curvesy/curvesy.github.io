@@ -51,15 +51,6 @@
    box-sizing: border-box;
 }
 
-body {
-   margin: 0;
-   min-height: 100%;
-   background-color: #fff;
-   font-family: Arial, sans-serif;
-   font-size: 14px;
-   line-height: 20px;
-   color: #333;
-}
 img {
    max-width: 100%;
    vertical-align: middle;
@@ -1136,16 +1127,6 @@ textarea.w-select {
    display: flex !important;
 }
 
-body {
-   background-color: #f9f8f4;
-   font-family: Circularxxweb, sans-serif;
-   color: #0a2a30;
-   font-size: 1vw;
-   line-height: 1.6;
-   font-weight: 300;
-   letter-spacing: 0em;
-}
-
 ul {
    display: -webkit-box;
    display: -webkit-flex;
@@ -1324,7 +1305,7 @@ blockquote {
    -webkit-justify-content: space-between;
    -ms-flex-pack: justify;
    justify-content: space-between;
-   color: #adaba3;
+   color: #b69fa5;
 }
 
 .footer.is--404 {
@@ -1503,7 +1484,7 @@ blockquote {
    border-width: 0.1em;
    border-color: #0a2a30;
    border-radius: 2em;
-   background-color: #0a2a30;
+   background-color: #453248;
    color: #fff;
    font-size: 1.25em;
    font-weight: 500;
@@ -1571,7 +1552,7 @@ blockquote {
 .work {
    padding-top: 11em;
    padding-bottom: 8em;
-   background-color: #0d1e21;
+   background-color: #453248;
 }
 
 .container__broad.is--testimonial {
@@ -1689,7 +1670,7 @@ blockquote {
    justify-content: space-between;
    grid-row-gap: 1.25em;
    border-radius: 1.5em;
-   background-color: #313c3d;
+   background-color: #7a727b;
    font-size: 1em;
 }
 
@@ -1866,7 +1847,7 @@ blockquote {
 }
 
 .dark-mode {
-   background-color: #0d1e21;
+   background-color: #453248;
    color: #fff;
 }
 
@@ -1893,7 +1874,7 @@ blockquote {
 
 .accordion-item {
    border-radius: 1.5em;
-   background-color: #fff;
+   background-color: #fef2ee;
 }
 
 .accordion-item.js-accordion-item {
@@ -1919,7 +1900,7 @@ blockquote {
 }
 
 .accordion-item.js-accordion-item.is--darkmode {
-   background-color: #000;
+   background-color: #352938;
    color: #fff;
 }
 
@@ -2336,7 +2317,7 @@ blockquote {
    display: inline-block;
    padding: 1.1em 2.4em;
    border-radius: 2em;
-   background-color: #0a2a30;
+   background-color: #453248;
    color: #fff;
    font-size: 1.25em;
    font-weight: 500;
@@ -2625,7 +2606,7 @@ blockquote {
    -ms-flex-line-pack: justify;
    align-content: space-between;
    grid-column-gap: 4em;
-   color: #f9f8f4;
+   color: #feeae3;
 }
 
 .navigation__backdrop.is--mobile {
@@ -2648,6 +2629,7 @@ blockquote {
    height: 75vh;
    margin-top: -8em;
    margin-bottom: -11em;
+   // background-color: #453248;
 }
 
 .logos__container {
@@ -2692,7 +2674,11 @@ blockquote {
       from(#0d1e21),
       to(rgba(13, 30, 33, 0))
    );
-   background-image: linear-gradient(90deg, #0d1e21, rgba(13, 30, 33, 0));
+   background-image: linear-gradient(
+      90deg,
+      rgb(68 54 70),
+      rgb(155 123 149 / 0%)
+   );
 }
 
 .logos__cover.is--right {
@@ -2707,7 +2693,11 @@ blockquote {
       from(#0d1e21),
       to(rgba(13, 30, 33, 0))
    );
-   background-image: linear-gradient(270deg, #0d1e21, rgba(13, 30, 33, 0));
+   background-image: linear-gradient(
+      270deg,
+      rgb(68 54 70),
+      rgb(155 123 149 / 0%)
+   );
 }
 
 .stage__buttons {
@@ -3858,6 +3848,7 @@ blockquote {
 
    .accordion-item.js-accordion-item {
       padding-bottom: 8px;
+      color: #fef2ee;
       border-radius: 24px;
    }
 
@@ -3868,6 +3859,9 @@ blockquote {
    .accordion-item.js-accordion-item.active {
       padding-top: 8px;
       padding-bottom: 32px;
+   }
+
+   .accordion-item.js-accordion-item.is--darkmode {
    }
 
    .accordion-item.js-accordion-item.is--darkmode:hover {
