@@ -6,15 +6,22 @@ window.onscroll = function (event) {
    var scroll = window.pageYOffset;
    var elem = document.getElementById("el");
    var aTags = document.getElementsByTagName("a");
+   console.log(scroll);
    if (scroll < 300) {
+      for (aTag of aTags) {
+         aTag.style.color = "#453248";
+      }
       elem.style.transition = "opacity 0.1s linear 0s";
       elem.style.opacity = 0.0;
+
       backDrop.style.color = "#feeae3";
    } else if (scroll >= 300 && scroll < 600) {
       elem.style.transition = "opacity 0.5s linear 0s";
       elem.style.opacity = 0.0;
+      aTag.style.color = "#453248";
+
       backDrop.style.color = "#feeae3";
-   } else if (scroll >= 700 && scroll < 6340) {
+   } else if (scroll >= 700 && scroll < 2880) {
       for (aTag of aTags) {
          aTag.style.color = "rgb(249, 248, 244)";
       }
