@@ -3551,7 +3551,7 @@ blockquote {
 }
 
 .is--grey {
-   max-width: 22em;
+   max-width: 27em;
    color: #e5e4df;
 }
 
@@ -3577,12 +3577,12 @@ blockquote {
 .portrait {
    position: absolute;
    z-index: 0;
-   // width: 43.125em;
-   // height: 49.75em;
-   margin-right: 10px;
-   object-fit: cover;
-   margin-top: -1.7em;
-   margin-left: 1.5em;
+   width: 35.125em;
+   height: 37.75em;
+   // margin-right: 10px;
+   // object-fit: cover;
+   margin-top: -6.9em;
+   margin-left: -5.5em;
 }
 
 .portrait.is--cover {
