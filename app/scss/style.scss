@@ -1533,7 +1533,8 @@ blockquote {
 }
 
 .avatar {
-   border-radius: 50%;
+   height: 34px;
+   width: 34px;
 }
 
 .avatar.is--navigation {
@@ -2284,6 +2285,7 @@ blockquote {
    height: 3.5em;
    min-height: 56px;
    text-align: right;
+   padding-top: 14px;
 }
 
 .menu__mobile {
