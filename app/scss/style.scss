@@ -2065,6 +2065,8 @@ blockquote {
 
 .change-header__move {
    margin-top: -0.25em;
+   animation: move infinite 10s cubic-bezier(.78,-0.11,.31,1.1);
+   animation-direction: alternate;
 }
 
 .container-great-for {
@@ -3907,6 +3909,7 @@ blockquote {
 
    .change-header__move {
       margin-top: -4px;
+      animation: move infinite 10s cubic-bezier(.78,-0.11,.31,1.1);
    }
 
    .container-great-for {
@@ -4508,6 +4511,14 @@ blockquote {
    .div-block-2 {
       width: 100%;
    }
+}
+
+@keyframes move {
+   0% { transform: translateY(0%); }
+   25% { transform: translateY(-20%); }
+   50% { transform: translateY(-40%); }
+   75% { transform: translateY(-60%); }
+   100% { transform: translateY(-80%); }
 }
 
 @media screen and (max-width: 767px) {
