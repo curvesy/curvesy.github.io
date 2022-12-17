@@ -5,8 +5,9 @@ backDrop.style.color = "#feeae3";
 window.onscroll = function (event) {
    var scroll = window.pageYOffset;
    var elem = document.getElementById("el");
+   var glem = document.querySelectorAll(".transition");
    var aTags = document.getElementsByTagName("a");
-   console.log(scroll);
+   console.log(glem[1]);
    if (scroll < 300) {
       for (aTag of aTags) {
          aTag.style.color = "#453248";
@@ -26,17 +27,16 @@ window.onscroll = function (event) {
          aTag.style.color = "rgb(249, 248, 244)";
       }
 
-      elem.style.transition = "opacity 0.4s linear 0.1s";
-      elem.style.opacity = 1.0;
-      elem.style.backgroundColor = "#453248";
-
-      elem.style.backgroundColor = "#453248";
       backDrop.style.transition = "color 0.2s linear 0.2s";
       backDrop.style.color = "#453248";
-   } else {
+   } else if (scroll > 3200) {
       for (aTag of aTags) {
          aTag.style.color = "#453248";
       }
+      glem[1].style.transition = "opacity 0.4s linear 0.1s";
+      glem[1].style.opacity = 0.0;
+      // glem[1].style.backgroundColor = "#feeae3";
+
       backDrop.style.color = "#feeae3";
    }
 };
@@ -88,3 +88,19 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
+
+//mobile nav
+const nav = document.querySelector(".menu__link-mobile");
+const expanded = document.querySelector(".menu__mobile__expanded");
+const expandedBG = document.querySelector(".is--close-trigger");
+console.log(expandedBG);
+
+nav.addEventListener("click", () => {
+   expanded.style.display = "flex";
+});
+
+expandedBG.addEventListener("click", () => {
+   expanded.style.display = "none";
+});
+
+// mobile-expanded__background is--close-trigger

@@ -2065,7 +2065,7 @@ blockquote {
 
 .change-header__move {
    margin-top: -0.25em;
-   animation: move infinite 10s cubic-bezier(.78,-0.11,.31,1.1);
+   animation: move infinite 10s cubic-bezier(0.78, -0.11, 0.31, 1.1);
    animation-direction: alternate;
 }
 
@@ -3575,8 +3575,8 @@ blockquote {
    height: 37.75em;
    // margin-right: 10px;
    // object-fit: cover;
-   margin-top: -6.9em;
-   margin-left: -5.5em;
+   margin-top: 2.2em;
+   margin-left: 0.5em;
 }
 
 .portrait.is--cover {
@@ -3846,7 +3846,7 @@ blockquote {
 
    .accordion-item.js-accordion-item {
       padding-bottom: 8px;
-      color: #fef2ee;
+      color: #453248;
       border-radius: 24px;
    }
 
@@ -3909,7 +3909,7 @@ blockquote {
 
    .change-header__move {
       margin-top: -4px;
-      animation: move infinite 10s cubic-bezier(.78,-0.11,.31,1.1);
+      animation: move infinite 10s cubic-bezier(0.78, -0.11, 0.31, 1.1);
    }
 
    .container-great-for {
@@ -4514,11 +4514,21 @@ blockquote {
 }
 
 @keyframes move {
-   0% { transform: translateY(0%); }
-   25% { transform: translateY(-20%); }
-   50% { transform: translateY(-40%); }
-   75% { transform: translateY(-60%); }
-   100% { transform: translateY(-80%); }
+   0% {
+      transform: translateY(0%);
+   }
+   25% {
+      transform: translateY(-20%);
+   }
+   50% {
+      transform: translateY(-40%);
+   }
+   75% {
+      transform: translateY(-60%);
+   }
+   100% {
+      transform: translateY(-80%);
+   }
 }
 
 @media screen and (max-width: 767px) {
